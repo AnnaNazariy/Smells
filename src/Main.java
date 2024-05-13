@@ -42,7 +42,7 @@ public class Main {
         person.addTask("Complete project");
 
         person.displayInfo();
-        System.out.println("------------------------------------");
+        System.out.println("-------------------------------------");
 
     }
 }
