@@ -1,15 +1,48 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import Laba5.LargeClass;
+import Laba5.Order;
+import Laba5.UserListProcessor;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Example usage of UserListProcessor
+        System.out.println("UserListProcessor: ");
+        ArrayList<String> usernames = new ArrayList<>();
+        usernames.add("john_admin");
+        usernames.add("jane_doe");
+        usernames.add("admin_007");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+        UserListProcessor userListProcessor = new UserListProcessor(usernames);
+        userListProcessor.processUserList();
+        int adminCount = userListProcessor.countAdminUsers();
+        System.out.println("Number of admin users: " + adminCount);
+        System.out.println("------------------------------------");
+
+        // Example usage of Order
+        System.out.println("Order: ");
+        List<String> items = new ArrayList<>();
+        items.add("Item1");
+        items.add("Item2");
+        items.add("Item3");
+
+        Order order = new Order("John Doe", items);
+        order.processOrder();
+        System.out.println("Total price: " + order.getTotalPrice());
+        System.out.println("------------------------------------");
+
+        // Example usage of LargeClass
+        System.out.println("LargeClass");
+        LargeClass person = new LargeClass("Alice", 30, "Female");
+        person.addFriend("Bob");
+        person.addFriend("Charlie");
+        person.addEnemy("Eve");
+        person.addTask("Complete project");
+
+        person.displayInfo();
+        System.out.println("------------------------------------");
+
     }
 }
