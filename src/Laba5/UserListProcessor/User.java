@@ -1,2 +1,12 @@
-package Laba5.UserListProcessor;public class User {
+package Laba5.UserListProcessor;
+
+public class User {
+    private String username;
+    private String email;
+
+    public User(String username, String email) {
+        this.username = username;
+        this.email = email;
+    }
+
 }
