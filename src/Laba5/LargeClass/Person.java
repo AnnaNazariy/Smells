@@ -10,6 +10,7 @@ public class Person {
     private List<String> enemies;
     private List<String> tasks;
 
+
     public Person(String name, int age, String gender) {
         this.name = name;
         this.age = age;
