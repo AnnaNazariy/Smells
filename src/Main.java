@@ -10,6 +10,8 @@ import Laba5.UserListProcessor.UserCounter;
 import Laba5.UserListProcessor.UserListProcessor2;
 import Laba6.Part1.t1.Account;
 import Laba6.Part1.t1.Bank;
+import Laba6.Part1.t2.Company;
+import Laba6.Part1.t2.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,5 +96,29 @@ public class Main {
         Bank bank = new Bank(accounts);
         bank.processAccounts();
         System.out.println("---------------------------------------------------------");
+
+
+        System.out.println("task2");
+        Employee emp1 = new Employee("Олександр");
+        Employee emp2 = new Employee("Іван");
+        Employee emp3 = new Employee("Марія");
+        Employee emp4 = new Employee("Оксана");
+
+        List<Employee> employees = new ArrayList<>();
+        employees.add(emp1);
+        employees.add(emp2);
+        employees.add(emp3);
+        employees.add(emp4);
+
+        Company company = new Company(employees, 250.00);
+        company.printEmployeeSalaries();
+        System.out.println("---------------------------------------------------------");
+
+
+        System.out.println("task4");
+
+
+        System.out.println("---------------------------------------------------------");
+
     }
 }
