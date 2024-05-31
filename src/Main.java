@@ -12,8 +12,11 @@ import Laba6.Part1.t1.Account;
 import Laba6.Part1.t1.Bank;
 import Laba6.Part1.t2.Company;
 import Laba6.Part1.t2.Employee;
+import Laba6.Part1.t7.Client;
+import Laba6.Part1.t8.DateHelper;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Main {
@@ -115,9 +118,18 @@ public class Main {
         System.out.println("---------------------------------------------------------");
 
 
-        System.out.println("task4");
+        System.out.println("task7");
+        Client client = new Client();
+        client.doSomething();
 
+        System.out.println("---------------------------------------------------------");
 
+        System.out.println("task8");
+        Date currentDate = new Date();
+        System.out.println("Current date: " + currentDate);
+
+        Date futureDate = DateHelper.addDays(currentDate, 5);
+        System.out.println("Date after adding 5 days: " + futureDate);
         System.out.println("---------------------------------------------------------");
 
     }
