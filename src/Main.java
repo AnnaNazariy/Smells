@@ -8,6 +8,8 @@ import Laba5.Older.PaymentProcessor;
 import Laba5.UserListProcessor.User;
 import Laba5.UserListProcessor.UserCounter;
 import Laba5.UserListProcessor.UserListProcessor2;
+import Laba6.Part1.t1.Account;
+import Laba6.Part1.t1.Bank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +78,21 @@ public class Main {
         User user = new User("new_user", "new_user@example.com");
         userListProcessor.addUser(user);
         userListProcessor.sendEmailToUser(user);
+        System.out.println("---------------------------------------------------------");
+
+        System.out.println("Laba6");
+        System.out.println("Part1");
+        System.out.println("task1");
+        Account acc1 = new Account(150000.00, 2.50);
+        Account acc2 = new Account(250000.00, 3.75);
+
+
+        List<Account> accounts = new ArrayList<>();
+        accounts.add(acc1);
+        accounts.add(acc2);
+
+        Bank bank = new Bank(accounts);
+        bank.processAccounts();
         System.out.println("---------------------------------------------------------");
     }
 }
